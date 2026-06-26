@@ -6,12 +6,12 @@
         let response = await fetch("https://dummyjson.com/quotes/random");
         let data = await response.json();
 
-        console.log(data); // 👈 debug ke liye
+        console.log(data);
 
         quoteEl.innerText = `"${data.quote}"`;    
         authorEl.innerText = `- ${data.author}`;  
 
     } catch (error) {
-        quoteEl.innerText = "Error loading quote 😢";
+        quoteEl.innerText = "Error loading quote";
     }
 }
